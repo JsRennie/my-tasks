@@ -1,4 +1,6 @@
 import "./globals.css";
+import SideNav from "./layouts/SideNav";
+import TopNav from "./layouts/TopNav";
 
 export const metadata = {
   title: "Online Project Manager",
@@ -12,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="flex">
+        <SideNav />
+        <TopNav />
+        {children}
+      </body>
     </html>
   );
 }
